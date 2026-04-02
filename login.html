@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dd</title>
+	<link rel="stylesheet" href="../CCSS/style.css">
+	<script src="login.js" defer> </script>
+</head>
+<body>
+	<div class ="r1p1">
+			<div class="r1p2">
+				<a href="index-саайт.html">
+					<img src="hhh.png" alt="" width="350px" > 
+				</a> 
+			</div>
+				<div id="user-info">
+    				<h1 id="welcome-text"></h1>
+    				<p id="user-email"></p>
+    				<button onclick="logout()">ВЫЙТИ</button>
+			</div>
+	</div>
+			<!-- Кнопка добавления -->
+<div class="r2p1" onclick="openSearch()">
+  <span class="r2p1-icon">+</span>
+  <span class="r2p1-text">Добавить устройство</span>
+</div>
+
+<!-- Сюда будут появляться карточки устройств -->
+<div class="devices-container" id="devicesContainer"></div>
+
+<!-- Модалка поиска -->
+<div class="modal-overlay" id="searchModal">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeSearch()">×</button>
+    <h2 class="modal-title">Найти устройство</h2>
+    <input type="text" class="modal-input" id="deviceInput" placeholder="Введите название..." oninput="filterDevices()">
+    <div class="modal-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- Модалка управления -->
+<div class="modal-overlay" id="controlModal">
+  <div class="modal-box modal-box-lg" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeControl()">×</button>
+    <div id="controlPanel"></div>
+  </div>
+</div>
+
+<!-- Подключи скрипт перед </body> -->
+
+
+
+	
+<script>
+ 
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+
+
+    if (!user) {
+        window.location.href = 'index.html';
+    } else {
+        document.getElementById('user-email').textContent = 'Email: ' + user.email;
+    }
+
+
+    function logout() {
+        localStorage.removeItem('currentUser');
+        window.location.href = 'index.html';
+    }
+
+</script>
+</body>
+</html>
