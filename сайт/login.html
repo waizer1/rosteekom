@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dd</title>
+	<link rel="stylesheet" href="../CSS/login.css">
+	<script src="login.js" defer> </script>
+</head>
+<body>
+	<div class ="r1p1">
+			<div class="r1p2">
+				<a href="index-саайт.html">
+					<img src="hhh.png" alt="" width="350px" > 
+				</a> 
+
+
+		</div>
+			<div class="r2p1"><h5>ПОКА ЗДЕСЬ НИЧЕГО</h5>
+					<H5>НЕТУ😊</H5>
+			</div>	
+			<div id="user-info">
+    <h1 id="welcome-text"></h1>
+    <p id="user-email"></p>
+    <button onclick="logout()">ВЫЙТИ</button>
+</div>
+
+<script>
+ 
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+
+
+    if (!user) {
+        window.location.href = 'index.html';
+    } else {
+        document.getElementById('user-email').textContent = 'Email: ' + user.email;
+    }
+
+
+    function logout() {
+        localStorage.removeItem('currentUser');
+        window.location.href = 'index.html';
+    }
+</script>
+</body>
+</html>

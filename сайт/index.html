@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dd</title>
+	<link rel="stylesheet" href="../CSS/stole.css">
+	<script src="jjj.js" defer> </script>
+</head>
+<body>
+	<div class ="r1p1">
+			<div class="r1p2">
+				<a href="index-саайт.html">
+					<img src="hhh.png" alt="" width="350px" > 
+				</a> 
+
+			</div>
+
+
+			<div class="block"></div>
+
+ <div class="block-right">
+        <div class="r1p3" id="r1p3">
+            <h2>ЗАРЕГИСТРИРОВАТЬСЯ</h2>
+        </div>
+        <div class="r1p4" id="r1p4">
+            <h2>ВОЙТИ</h2>
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal">
+            <button class="modal-close" id="closeRegister">&times;</button>
+            <h2 class="modal-title">Регистрация</h2>
+            <form class="modal-form" id="registerForm">
+                <div class="form-group">
+                    <label for="reg-name">Имя</label>
+                    <input type="text" id="reg-name" placeholder="Введите имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" placeholder="Введите email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" placeholder="Придумайте пароль" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password-confirm">Подтвердите пароль</label>
+                    <input type="password" id="reg-password-confirm" placeholder="Повторите пароль" required>
+                </div>
+                <div class="form-message" id="reg-message"></div>
+                <button type="submit" class="modal-btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            </form>
+            <p class="modal-switch">
+                Уже есть аккаунт?
+                <span id="switchToLogin">Войти</span>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal-close" id="closeLogin">&times;</button>
+            <h2 class="modal-title">Вход</h2>
+            <form class="modal-form" id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Введите email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" placeholder="Введите пароль" required>
+                </div>
+                <div class="form-message" id="login-message"></div>
+                <button type="submit" class="modal-btn">ВОЙТИ</button>
+            </form>
+            <p class="modal-switch">
+                Нет аккаунта?
+                <span id="switchToRegister">Зарегистрироваться</span>
+            </p>
+        </div>
+    </div>
+
+		</div>
+			<div class="r2p1">
+				<div class="slider">
+
+    <div class="slides">
+      <img src="n1.png" class="slide active" alt="Фото 1">
+      <img src="n2.png" class="slide" alt="Фото 2">
+      <img src="n3.png" class="slide" alt="Фото 3">
+    </div>
+
+
+    <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+			</div>	
+
+</body>
+</html>
